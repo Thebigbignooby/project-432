@@ -4,8 +4,28 @@
   "description": "project-432",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build-clean && npm run build-babel && npm run build-copy",
+    "build-clean": "rm -rf dist",
+    "build-babel": "babel src --out-dir dist",
+    "build-copy": "cp -R data dist/data",
+    "dev": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
+    "start": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
+    "test": "jest",
+    "serve": "node dist/index.js"
   },
   "author": "Rory Dent",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "express": "^4.17.1"
+  }
 }
