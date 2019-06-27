@@ -10,7 +10,7 @@
     "build": "npm run build-clean && npm run build-babel && npm run build-copy",
     "build-clean": "rm -rf dist",
     "build-babel": "babel src --out-dir dist",
-    "build-copy": "cp -R data dist/data",
+    "build-copy": "cp -R assets/data dist/data",
     "dev": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
     "start": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
     "test": "jest",
