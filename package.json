@@ -10,7 +10,7 @@
     "build": "npm run build-clean && npm run build-babel && npm run build-copy",
     "build-clean": "rm -rf dist",
     "build-babel": "babel src --out-dir dist",
-    "build-copy": "cp -R data dist/data",
+    "build-copy": "cp -R assets/data dist/data",
     "dev": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
     "start": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
     "test": "jest",
@@ -19,6 +19,7 @@
   "author": "Rory Dent",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.4.5",
     "@babel/plugin-transform-runtime": "^7.4.4",
