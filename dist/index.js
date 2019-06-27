@@ -11,7 +11,7 @@ var _express = _interopRequireDefault(require("express"));
 var _hello = require("./hello.world");
 
 var app = (0, _express["default"])();
-var port = process.env.PORT | 3000;
+var port = process.env.PORT || 3000;
 app.get('/',
 /*#__PURE__*/
 function () {
