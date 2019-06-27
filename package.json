@@ -1,5 +1,8 @@
 {
   "name": "project-432",
+  "engines": {
+    "node": ">=12.4.0"
+  },
   "version": "1.0.0",
   "description": "project-432",
   "main": "index.js",
