@@ -12,9 +12,9 @@
     "build-babel": "babel src --out-dir dist",
     "build-copy": "cp -R assets/data dist/data",
     "dev": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
-    "start": "nodemon --exec node -r node_modules/dotenv/config --watch src --exec babel-node ./src/index.js",
-    "test": "jest",
-    "serve": "node dist/index.js"
+    "start": "node dist/index.js",
+    "serve": "node dist/index.js",
+    "test": "jest"
   },
   "author": "Rory Dent",
   "license": "ISC",
