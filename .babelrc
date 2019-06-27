@@ -3,6 +3,7 @@
     "@babel/preset-env"
   ],
   "plugins": [
+    "@babel/plugin-transform-runtime",
     [
       "module-resolver",
       {
@@ -11,12 +12,5 @@
         ]
       }
     ]
-  ],
-  "env": {
-    "test": {
-      "plugins": [
-        "@babel/plugin-transform-runtime"
-      ]
-    }
-  }
+  ]
 }
